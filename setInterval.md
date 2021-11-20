@@ -42,3 +42,4 @@ inter = setInterval(func , 1000, n, m);
 
 ### 참고 링크
 [MDN setInterval 문서](https://developer.mozilla.org/en-US/docs/Web/API/setInterval/){:target="_blank"}
+<a href="https://www.google.com/" target="_blank">새 탭에서 열기</a>

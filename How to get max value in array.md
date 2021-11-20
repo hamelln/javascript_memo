@@ -17,8 +17,8 @@ Math.max(arr);
 // 배열인 변수의 최댓값을 원할 땐 spread operator를 사용한다.
 Math.max(...arr);
 
-//spread operator는 길이가 짧은 배열일 때에만 사용할 수 있다. 큰 범위(1만, 10만 이상 단위)는 reduce를 이용해야 한다.
-let arr = [1,2, .... ,360000];
+//Math.max()와 spread operator는 길이가 짧은 배열일 때에만 사용할 수 있다. 큰 범위(1만, 10만 이상 단위)는 reduce를 이용해야 한다.
+let arr = Array.from({length: 1000000}, (v, i) => i);
 let max = arr.reduce((a,b) ⇒ {
      return Math.max(a,b);
 });

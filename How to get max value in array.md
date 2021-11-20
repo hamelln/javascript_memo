@@ -28,3 +28,4 @@ let max = arr.reduce((a,b) ⇒ {
 [Math.max()문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/max)  
 [spread operator문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)  
 [reduce()문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)  
+[Array.from()문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/from)

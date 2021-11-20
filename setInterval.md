@@ -1,7 +1,9 @@
-## 제목
+## setIntervel
 
 
 ### 개요
+
+일정 시간마다 작동하는 함수
 
 - 
 
@@ -34,3 +36,4 @@ inter = setInterval(func , 1000, n, m);
 ```
 
 ### 참고 링크
+        https://developer.mozilla.org/en-US/docs/Web/API/setInterval

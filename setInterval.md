@@ -36,4 +36,4 @@ inter = setInterval(func , 1000, n, m);
 ```
 
 ### 참고 링크
-        https://developer.mozilla.org/en-US/docs/Web/API/setInterval
+    https://developer.mozilla.org/en-US/docs/Web/API/setInterval

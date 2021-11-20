@@ -7,6 +7,7 @@
 ### 언제 쓰나?
 
 - 어떤 동작을 주기적으로 반복해서 실행할 때 사용. 한 번만 쓰고 끝내려면 setTimeout를 사용.
+- 동작을 끝낼 때는 clearInterval()을 사용.
 
 ### 용법
 
@@ -26,11 +27,15 @@ let m = 2;
 const func = () => {
     console.log(n);
     n += m;
+    if(n > 10) {
+        clearInterval(inter);
+        inter = null;
+    }
 }
 
 inter = setInterval(func , 1000, n, m);
 
-// 결과 : 1 3 5 7 9 ...
+// 결과 : 1 3 5 7 9
 ```
 
 ### 참고 링크

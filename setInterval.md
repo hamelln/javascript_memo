@@ -34,9 +34,11 @@ const func = () => {
 }
 
 inter = setInterval(func , 1000, n, m);
-
-// 결과 : 1 3 5 7 9
 ```
+
+### 결과
+
+![image](https://user-images.githubusercontent.com/39308313/142716068-4e027e46-6aaa-47b7-ade9-8e3a565c7046.png)
 
 ### 참고 링크
     https://developer.mozilla.org/en-US/docs/Web/API/setInterval

@@ -18,7 +18,7 @@ Math.max(arr);
 Math.max(...arr);
 
 
-//__spread operator는 길이가 125647 이하인 배열만 적용할 수 있다. 그 이상의 배열을 처리하고 싶으면 reduce를 이용해야 한다.__
+//spread operator는 길이가 125647 이하인 배열만 적용할 수 있다. 그 이상의 배열은 reduce를 이용해야 한다.
 let arr = [1,2,....,360000];
 let max = arr.reduce((a,b) ⇒ {
      return Math.max(a,b);

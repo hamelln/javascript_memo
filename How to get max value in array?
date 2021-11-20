@@ -1,0 +1,11 @@
+ex 1)
+Math.max(1,2,3,4); ⇒ 4
+let arr = [1,2,3,4];
+Math.max(arr); ⇒ NaN
+Math.max(...arr); ⇒ 4
+
+ex 2)
+let arr = [1,2,....,360000];
+let max = arr.reduce((a,b) ⇒ {
+     return Math.max(a,b);
+});

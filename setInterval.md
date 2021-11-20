@@ -1,26 +1,22 @@
-## setIntervel
-
+## setIntervel이란?
 
 ### 개요
 
-일정 시간마다 작동하는 함수
+- 일정 시간마다 작동하는 함수
 
-- 
+### 언제 쓰나?
 
-### 구조
-
-- **x**
-
+- 어떤 동작을 주기적으로 반복해서 실행할 때 사용. 한 번만 쓰고 끝내려면 setTimeout를 사용.
 
 ### 용법
 
-### 용례(code)
-
 ```txt
-
+var intervalID = setInterval(func, [delay, arg1, arg2, ...]);
+var intervalID = setInterval(function[, delay]);
+var intervalID = setInterval(code, [delay]);
 ```
 
-### code
+### 용례(code)
 
 ```javascript
 let inter;
@@ -33,6 +29,8 @@ const func = () => {
 }
 
 inter = setInterval(func , 1000, n, m);
+
+// 결과 : 1 3 5 7 9 ...
 ```
 
 ### 참고 링크

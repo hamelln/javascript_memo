@@ -105,7 +105,7 @@ let sum2 = arr2.reduce((acc, curVal) => {
 
 ```javascript
 let arr3 = [[0, 1], [2, 3], [4, 5]];
-let sum3 = arr3.reduce((acc, curVal) => acc = [...acc, ...curVal], []);
+let sum3 = arr3.reduce((acc, curVal) => [...acc, ...curVal], []);
 
 let arr4 = [[0, 1], [2, 3], [4, 5]];
 let sum4 = arr3.reduce((acc, curVal) => acc.concat(curVal), []);
@@ -115,6 +115,40 @@ let sum4 = arr3.reduce((acc, curVal) => acc.concat(curVal), []);
 
 ```txt
 reduce는 이중 배열을 풀어서 처리할 수도 있다. 둘의 결과는 모두 [0,1,2,3,4,5]가 출력된다. 입맛에 맞는 방법을 쓰자.
+```
+
+### 4-1) 객체 배열 안에 있는 특정 배열 값을 추출할 때
+
+```javascript
+let friends = [{
+    name: 'Anna',
+    books: ['Bible', 'Harry Potter'],
+    age: 21
+  }, {
+    name: 'Bob',
+    books: ['War and peace', 'Romeo and Juliet'],
+    age: 26
+  }, {
+    name: 'Alice',
+    books: ['The Lord of the Rings', 'The Shining'],
+    age: 18
+  }];
+  
+let allbooks = friends.reduce((acc, curVal) => [...acc, ...curVal.books], ['Alphabet', 'Test of math']);
+```
+
+### 해설
+
+```txt
+spread operator를 쓰면 배열은 빼고 배열 내의 원소들만 나열된다.
+1. 초기값 acc = ['Alphabet', 'Test of math']
+2. 현재 curVal = { name: 'Anna', books: ['Bible', 'Harry Potter'], age: 21 }
+3. 현재 curVal.books = ['Bible', 'Harry Potter']
+
+4. return [...acc, ...curVal.books]이 의미하는 바는
+   acc = ['Alphabet', 'Test of math', 'Bible', 'Harry Potter']라는 뜻이다.
+
+5. 따라서 최종적으로 모든 books의 string값만 모아 배열로 만들어서 allbooks 변수로 넘긴다.
 ```
 
 ### 5) 배열 원소들의 갯수를 세서 객체로 표현하고 싶을 때

@@ -241,7 +241,7 @@ acc의 상태는 { '21': [ { name: 'Alice', age: 21 } ] }가 된다.
 }
 ```
 
-### 파이프 함수를 쓸 때
+### 7) 파이프 함수를 쓸 때
 
 ```javascript
 const double = x => x + x;

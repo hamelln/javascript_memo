@@ -1,4 +1,4 @@
-## reduce()
+## About reduce method
 
 ### 개요
 

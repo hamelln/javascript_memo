@@ -19,9 +19,7 @@ Math.max(...arr);
 
 //Math.max()와 spread operator는 길이가 짧은 배열일 때에만 사용할 수 있다. 큰 범위(1만, 10만 이상 단위)는 reduce를 이용해야 한다.
 let arr = Array.from({length: 1000000}, (v, i) => i);
-let max = arr.reduce((a,b) ⇒ {
-     return Math.max(a,b);
-});
+let max = arr.reduce((a,b) => Math.max(a,b));
 ```
 
 ### 참고 링크

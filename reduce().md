@@ -279,6 +279,40 @@ const result = myfunc(2,2);
 5. 모든 과정이 끝났으므로 result에 `입력된 값은 2이고 2배는 4입니다.`이 저장된다.
 ```
 
+### 8) 배열의 중복값을 제거할 때
+
+```javascript
+let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
+let result = arr.sort().reduce((acc, curVal) => {
+    const length = acc.length
+    if (length === 0 || acc[length - 1] !== curVal) {
+        acc.push(curVal);
+    }
+    return acc;
+}, []);
+```
+
+### 해설
+
+```txt
+1. arr.sort()로 정렬한다.
+
+2. 정렬된 arr에 reduce를 실행한다.
+
+3. acc 초기값은 빈 배열 [], current는 1
+
+4. 반복할 때마다 acc의 length를 구한다.
+
+5. 만약 acc가 비어있으면 curVal을 넣는다.
+
+5-1. acc가 비어있지 않으면, acc의 마지막 값이 curVal과 다를 때에만 acc.push(curVal)을 한다.
+(이유 : sort를 했기 때문에 acc 마지막 값만 검사해도 된다.)
+
+6. return acc를 하고 계속 반복한다. 
+
+7. arr를 오름차순으로 정렬하고, 중복값을 제거한 배열이 result에 저장된다.
+```
+
 ### 참고 링크
 
 [MDN reduce()문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)

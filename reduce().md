@@ -191,11 +191,11 @@ let people = [
 7. 현재 acc가 빈 객체 {}이므로 acc[21]이란 건 없다. 따라서 acc[21] = [];로 만든다.
 acc의 상태는 { '21': [] }가 된다.
 
-8. 그리고 acc[21].push({ name: 'Alice', age: 21 })를 실행한뒤 acc를 return
+8. 그리고 acc[21].push({ name: 'Alice', age: 21 })를 실행한뒤 acc를 return.
 acc의 상태는 { '21': [ { name: 'Alice', age: 21 } ] }가 된다.
 ※acc가 누산기이므로 이런 작업을 할 땐 항상 return acc를 해줘야 결과값이 쌓인다.
 
-9. 그 다음엔 acc[20] = []로 선언하고, acc[20].push({ name: 'Max', age: 20 }).
+9. 그 다음엔 acc[20] = []로 선언하고, acc[20].push({ name: 'Max', age: 20 });
 
 10. 그 다음엔 acc[20]이 있으므로 acc[20]에 바로 { name: 'Jane', age: 20 }를 push
 

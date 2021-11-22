@@ -1,4 +1,4 @@
-## setIntervel이란?
+## About setIntervel method
 
 ### 개요
 

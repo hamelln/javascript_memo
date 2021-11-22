@@ -73,10 +73,10 @@ Number로 형변환을 처리하면 해결된다.
 
 let arr2 = [{str: 1}, {str:2}, {str:3}, {int:4, dex:1, job:'wizard'}];
 ```
-
+```txt
 key값이 존재하는지 검사하고, 없는 사람은 curVal.str = 1로 지정한다. 즉, 해당 객체에 {str : 1}이라는 값을 추가하겠단 뜻.
 그리고 acc + curVal.str을 처리해서 파티원들의 str을 총합한다.
-
+```
 ### 정답 2 - 코드
 
 ```javascript
@@ -86,7 +86,19 @@ let sum2 = arr2.reduce((acc, curVal) => {
   return acc + curVal.str}, 0);
 ```
 
+### 예제 3
+```
+let arr3 = [[0, 1], [2, 3], [4, 5]];
+let sum3 = arr3.reduce((acc, curVal) => acc = [...acc, ...curVal], []);
 
+let arr4 = [[0, 1], [2, 3], [4, 5]];
+let sum4 = arr3.reduce((acc, curVal) => acc.concat(curVal), []);
+```
+
+### 해설
+```txt
+reduce는 이중 배열을 풀어서 처리할 수도 있다. 둘의 결과는 모두 [0,1,2,3,4,5]가 출력된다. 입맛에 맞는 방법을 쓰자.
+```
 ### 참고 링크
 
 [MDN reduce()문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)

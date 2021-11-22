@@ -15,6 +15,7 @@ let arr = [1,1,2,3];
 let sum = arr.reduce((acc, curVal) => acc + curVal, 0);
 ```
 ### 해설
+```txt
 1. 맨 끝에 적힌 0은 acc에 담길 초기값이다. 즉, acc = 0으로 초기화된 상태.
 2. curVal는 arr에 있는 최근값이다. 즉, curVal = 1 -> 1 -> 2 -> 3으로 차례대로 변한다.
 3. 함수가 acc + curVal이므로 아래 순서대로 처리된다.
@@ -25,7 +26,7 @@ let sum = arr.reduce((acc, curVal) => acc + curVal, 0);
       acc = 4 + 3
 
 (acc는 이름대로 누산이다. 계산이 계속 누적되는 변수이다. 화살표 함수라 return을 생략했지만 return acc + curVal이라 하면 acc에 acc + curVal이 return되는 것.)
-
+```
 ### 예제 2
 
 ```javascript
@@ -33,25 +34,27 @@ let arr2 = [{x: 1}, {x:2}, {x:3}];
 let sum2 = arr2.reduce((acc, curVal) => acc + curVal.x), 0);
 ```
 ### 해설
-
+```txt
 reduce는 객체 배열도 처리할 수 있다.
 acc = 0이고,
 curVal은 arr2의 원소 {x:1}, {x:2}, {x:3}이다.
 curVal의 key가 x이므로 curVal.x = 1 -> 2 -> 3이다.
 따라서 acc + curVal.x를 하면 0+1+2+3 = 6이 return된다.
-
-발문 1. key값이 다르면 어떻게 할까?
+```
+### 발문 1. key값이 다르면 어떻게 할까?
 
 ```javascript
 let arr2 = [{x: 1}, {x:2}, {x:3}, {y:4}];
 let sum2 = arr2.reduce((acc, curVal) => acc + curVal.x), 0);
 ```
 
+### 해설
+```txt
 객체의 key값이 x,y로 나뉘어져 있다. 
 curVal.x는 {y:4} 객체 원소에서 key값 x를 못 찾고 undefined를 return
 최종적으로는 6 + undefined로 계산한 뒤 return하므로 NaN이 출력된다.
 이를 해결하려면 다음과 같이 처리한다.
-
+```
 
 ### 정답 1 - 코드
 
@@ -60,11 +63,14 @@ let arr2 = [{x: 1}, {x:2}, {x:3}, {y:4}];
 let sum2 = arr2.reduce((acc, curVal) => acc + Number(Object.values(curVal)), 0);
 ```
 
+### 해설
+```txt
 Object.values를 이용하면 객체 내에 있는 '모든' value를 추출한다.
 그러나 이 때는 curVal.x와 달리 1이 추출되지 않는다. '1'도 아니다. object [ 1 ] 이 추출된다.
 Number로 형변환을 처리하면 해결된다.
+```
 
-발문 2. 아래와 같은 코드는 어떻게 할까?
+### 발문 2. 아래와 같은 코드는 어떻게 할까?
 
 ```javascript
 <!-- 이름 없는 파티원 4명이 있습니다. 파티원 모두 힘 str이 각각 입력되어 있어야 합니다. 

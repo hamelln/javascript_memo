@@ -14,5 +14,7 @@
 let arr = Array.from({length: 3}, (_, i) => i+1);
 ```
 
+    결과 : arr = [1,2,3]
+
 ### 참고 링크
 [MDN 문서](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from#array_from_a_map)

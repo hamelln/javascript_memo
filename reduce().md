@@ -314,13 +314,15 @@ let result = arr.sort().reduce((acc, curVal) => {
 결과 : [1,2,3,4,5]
 ```
 
+### 8-1) reduce 말고 중복 제거하는 법
+
 ```javascript
 let myArray = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
 let orderedArray = Array.from(new Set(myArray));
 ```
 
 ```txt
-※ MDN 문서에서는 set과 Array.from을 활용하는 것도 권장한다.
+MDN 문서에서는 set과 Array.from을 활용하는 것도 권장한다.
 이 경우에는 sort()처리 없이 중복값만 제거한다.
 결과 : [1,2,3,5,4]
 ```

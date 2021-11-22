@@ -317,6 +317,7 @@ let result = arr.sort().reduce((acc, curVal) => {
 ```javascript
 let myArray = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
 let orderedArray = Array.from(new Set(myArray));
+```
 
 ```txt
 ※ MDN 문서에서는 set과 Array.from을 활용하는 것도 권장한다.

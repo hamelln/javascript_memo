@@ -248,13 +248,15 @@ const double = x => x + x;
 const makeString = (x,y) => `입력된 값은 ${y}이고 2배는 ${x}입니다.`;
 const pipe = (...functions) => (input1, input2) => functions.reduce((acc, fn) => fn(acc, input2), input1);
 const myfunc = pipe(double, makeString);
-let set = [double, makeString];
+
 const result = myfunc(2);
 ```
 
 ### 해설
 
 ```txt
+참고 : double, makeString, pipe, myfunc는 전부 함수다. 값을 저장하는 변수는 result 뿐이다.
+
 1. double은 정수 인자 x를 2배로 만들어 return
 
 2. makeString은 정수 인자 x, y를 받아 "입력된 값은 2이고 2배는 4입니다."라는 string을 받고 싶다.

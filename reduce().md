@@ -240,6 +240,32 @@ acc의 상태는 { '21': [ { name: 'Alice', age: 21 } ] }가 된다.
   '21': [ { name: 'Alice', age: 21 } ]
 }
 ```
+
+### 파이프 함수를 쓸 때
+
+```javascript
+const double = x => x + x;
+const makeString = x => `입력된 값의 2배는 ${x}입니다.`;
+const pipe = (...functions) => input => functions.reduce((acc, fn) => fn(acc), input);
+const myfunc = pipe(double, makeString);
+const result = myfunc(2);
+```
+
+### 해설
+
+```txt
+1. double은 정수 인자 x를 2배로 만들어 return
+2. makeString은 정수 인자 x를 받아 "입력된 값의 2배는 2*x입니다."라는 string을 return
+3. myfunc는 double, makeString 함수를 인자로 전달 받는다.
+4. pipe는 인자로 전달된 함수 double, makeString을 처리한다.
+4-1. myfunc의 인자로 2가 전달됐고, 이 2는 double에 input이란 매개변수로 전달됐다. 
+4-2. acc의 초기값을 input으로 지정한다. 즉, acc = 2인 상태다.
+4-3. 현재 fn은 double이다. fn(acc)는 double(2)다.
+4-4. double(2)의 결과를 acc에 return한다.
+4-5. 다음 fn은 makeString이다. fn(acc)는 makeString(4) = `입력된 값의 2배는 4입니다.`를 return
+5. 모든 과정이 끝났으므로 result에 `입력된 값의 2배는 4입니다.`이 저장된다.
+```
+
 ### 참고 링크
 
 [MDN reduce()문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)

@@ -90,7 +90,7 @@ let arr2 = [{str: 1}, {str:2}, {str:3}, {int:4, dex:1, job:'wizard'}];
 ### 해설
 
 ```txt
-key값이 존재하는지 검사하고, 없는 사람은 curVal.str = 1로 지정한다. 즉, 해당 객체에 {str : 1}이라는 값을 추가하겠단 뜻.
+key값이 존재하는지 검사하고, 없는 사람은 curVal.str = 1로 지정한다. 즉, 해당 객체에 {str : 1}이라는 key, value값을 추가하겠단 뜻.
 그리고 acc + curVal.str을 처리해서 파티원들의 str을 총합한다.
 ```
 

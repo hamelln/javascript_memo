@@ -311,9 +311,19 @@ let result = arr.sort().reduce((acc, curVal) => {
 6. return acc를 하고 계속 반복한다. 
 
 7. arr를 오름차순으로 정렬하고, 중복값을 제거한 배열이 result에 저장된다.
-
-※ MDN 문서에서는 let orderedArray = Array.from(new Set(myArray)); 로도 할 수 있다고 권장한다.
+결과 : [1,2,3,4,5]
 ```
+
+```javascript
+let myArray = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
+let orderedArray = Array.from(new Set(myArray));
+
+```txt
+※ MDN 문서에서는 set과 Array.from을 활용하는 것도 권장한다.
+이 경우에는 sort()처리 없이 중복값만 제거한다.
+결과 : [1,2,3,5,4]
+```
+
 
 ### 참고 링크
 

@@ -194,17 +194,13 @@ let people = [
   ];
   
   function groupBy(objectArray, property) {
-    return objectArray.reduce(function (acc, obj) {
+    return objectArray.reduce((acc, obj) => {
       let key = obj[property];
-      if (!acc[key]) {
-        acc[key] = [];
-      }
+      if (!acc[key]) acc[key] = [];
       acc[key].push(obj);
       return acc;
     }, {});
   }
-  
-  let groupedPeople = groupBy(people, 'age');
 ```
 
 ### 해설
@@ -284,10 +280,8 @@ const result = myfunc(2,2);
 ```javascript
 let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
 let result = arr.sort().reduce((acc, curVal) => {
-    const length = acc.length
-    if (length === 0 || acc[length - 1] !== curVal) {
-        acc.push(curVal);
-    }
+    const length = acc.length;
+    if (length === 0 || acc[length - 1] !== curVal) acc.push(curVal);
     return acc;
 }, []);
 ```

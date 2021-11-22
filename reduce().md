@@ -48,7 +48,7 @@ curVal의 key가 x이므로 curVal.x = 1 -> 2 -> 3이다.
 따라서 acc + curVal.x를 하면 0+1+2+3 = 6이 return된다.
 ```
 
-### 발문 1. key값이 다르면 어떻게 할까?
+### Q) key값이 다르면 어떻게 할까?
 
 ```javascript
 let arr2 = [{x: 1}, {x:2}, {x:3}, {y:4}];
@@ -64,14 +64,12 @@ curVal.x는 {y:4} 객체 원소에서 key값 x를 못 찾고 undefined를 return
 이를 해결하려면 다음과 같이 처리한다.
 ```
 
-### 정답 1 - 코드
+### code
 
 ```javascript
 let arr2 = [{x: 1}, {x:2}, {x:3}, {y:4}];
 let sum2 = arr2.reduce((acc, curVal) => acc + Number(Object.values(curVal)), 0);
 ```
-
-### 해설
 
 ```txt
 Object.values를 이용하면 객체 내에 있는 '모든' value를 추출한다.
@@ -79,7 +77,7 @@ Object.values를 이용하면 객체 내에 있는 '모든' value를 추출한�
 Number로 형변환을 처리하면 해결된다.
 ```
 
-### 발문 2. 아래와 같은 코드는 어떻게 할까?
+### Q) 아래와 같은 코드는 어떻게 할까?
 
 ```javascript
 <!-- 이름 없는 파티원 4명이 있습니다. 파티원 모두 힘 str이 각각 입력되어 있어야 합니다. 

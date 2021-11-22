@@ -150,6 +150,59 @@ let countedNames = names.reduce((allNames, name) => {
 7. 이 결과는 변수 countedNames에 들어간다.
 ```
 
+### 6) 특정 key값을 기준으로 객체들을 재정리하고 싶을 때
+
+```javascript
+let people = [
+    { name: 'Alice', age: 21 },
+    { name: 'Max', age: 20 },
+    { name: 'Jane', age: 20 }
+  ];
+  
+  function groupBy(objectArray, property) {
+    return objectArray.reduce(function (acc, obj) {
+      let key = obj[property];
+      if (!acc[key]) {
+        acc[key] = [];
+      }
+      acc[key].push(obj);
+      return acc;
+    }, {});
+  }
+  
+  let groupedPeople = groupBy(people, 'age');
+```
+
+### 해설
+
+```txt
+1. people이라는 객체 배열이 있다. 특정 조건이 같은 사람끼리만 따로 묶어서 정리하고 싶다.
+
+2. people에 있는 객체들을 'age' 기준으로 정리하게 groupBy(people, 'age')라는 함수를 만든다.
+
+3. groupedPeople은 groupBy()함수가 이뤄진 people들을 담을 변수다.
+
+4. 누산기 acc는 초기값 {}인 빈 객체, 매개 변수 objectArray는 객체 배열 people이다.
+
+5. 현재 obj는 { name: 'Alice', age: 21 }, property는 'age'이다.
+
+6. 따라서 key = obj['age']를 하면 key = 21이다.
+
+7. 현재 acc가 빈 객체 {}이므로 acc[21]이란 건 없다. 따라서 acc[21] = [];로 만든다.
+
+8. 그리고 acc[21].push({ name: 'Alice', age: 21 })를 실행한다.
+
+9. 그 다음엔 acc[20] = []로 선언하고, acc[20].push({ name: 'Max', age: 20 }).
+
+10. 그 다음엔 acc[20]이 있으므로 acc[20]에 바로 { name: 'Jane', age: 20 }를 push
+
+11. 결과는 아래와 같은 object로 return되어 groupedPeople에 저장된다.
+
+{
+  '20': [ { name: 'Max', age: 20 }, { name: 'Jane', age: 20 } ],
+  '21': [ { name: 'Alice', age: 21 } ]
+}
+```
 ### 참고 링크
 
 [MDN reduce()문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)

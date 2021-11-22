@@ -8,7 +8,7 @@
 
 - 예시부터 보자.
 
-### 예제 1
+### 정수 배열의 합을 구하고 싶을 때
 
 ```javascript
 let arr = [1,1,2,3];
@@ -31,7 +31,7 @@ let sum = arr.reduce((acc, curVal) => acc + curVal, 0);
 화살표 함수라 return을 생략했지만 return acc + curVal이라 하면 acc에 acc + curVal이 return되는 것.)
 ```
 
-### 예제 2
+### 객체 배열의 합을 구하고 싶을 때
 
 ```javascript
 let arr2 = [{x: 1}, {x:2}, {x:3}];
@@ -48,7 +48,7 @@ curVal의 key가 x이므로 curVal.x = 1 -> 2 -> 3이다.
 따라서 acc + curVal.x를 하면 0+1+2+3 = 6이 return된다.
 ```
 
-### Q) key값이 다르면 어떻게 할까?
+### Q) 객체 배열에서 key값들이 다르면 어떻게 할까?
 
 ```javascript
 let arr2 = [{x: 1}, {x:2}, {x:3}, {y:4}];
@@ -77,7 +77,7 @@ Object.values()를 이용하면 객체 내에 있는 '모든' value를 추출한
 Number로 형변환을 처리하자.
 ```
 
-### Q) 아래와 같은 코드는 어떻게 할까?
+### 객체 배열에서 특정 조건을 통해서만 출력하고 싶을 때
 
       이름 없는 파티원 4명이 있습니다. 파티원 모두 힘 str이 각각 입력되어 있어야 합니다. 
       1. 입력이 없는 사람은 str = 1로 처리합니다. 
@@ -101,7 +101,7 @@ let sum2 = arr2.reduce((acc, curVal) => {
   return acc + curVal.str}, 0);
 ```
 
-### 예제 3
+### 이중 배열을 풀어내고 싶을 때
 
 ```javascript
 let arr3 = [[0, 1], [2, 3], [4, 5]];
@@ -117,7 +117,7 @@ let sum4 = arr3.reduce((acc, curVal) => acc.concat(curVal), []);
 reduce는 이중 배열을 풀어서 처리할 수도 있다. 둘의 결과는 모두 [0,1,2,3,4,5]가 출력된다. 입맛에 맞는 방법을 쓰자.
 ```
 
-### 예제 4
+### 배열 원소들의 갯수를 세서 객체로 표현하고 싶을 때
 
 ```javascript
 let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];

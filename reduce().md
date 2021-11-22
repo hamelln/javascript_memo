@@ -60,30 +60,30 @@ let sum2 = arr2.reduce((acc, curVal) => acc + curVal.x), 0);
 ```txt
 객체의 key값이 x,y로 나뉘어져 있다. 
 curVal.x는 {y:4} 객체 원소에서 key값 x를 못 찾고 undefined를 return
-최종적으로는 6 + undefined로 계산한 뒤 return하므로 NaN이 출력된다.
+위의 코드는 최종적으로는 6 + undefined로 계산한 뒤 return하므로 NaN이 출력된다.
 이를 해결하려면 다음과 같이 처리한다.
 ```
-
-### code
 
 ```javascript
 let arr2 = [{x: 1}, {x:2}, {x:3}, {y:4}];
 let sum2 = arr2.reduce((acc, curVal) => acc + Number(Object.values(curVal)), 0);
 ```
 
+### 추가 설명 Object
+
 ```txt
-Object.values를 이용하면 객체 내에 있는 '모든' value를 추출한다.
-그러나 이 때는 curVal.x와 달리 1이 추출되지 않는다. '1'도 아니다. object [ 1 ] 이 추출된다.
-Number로 형변환을 처리하면 해결된다.
+Object.values()를 이용하면 객체 내에 있는 '모든' value를 추출한다.
+그러나 이 때는 curVal.x와 달리 정수 1이 추출되지 않는다. '1'도 아니다. object [ 1 ] 이 추출된다.
+Number로 형변환을 처리하자.
 ```
 
 ### Q) 아래와 같은 코드는 어떻게 할까?
 
-```javascript
-<!-- 이름 없는 파티원 4명이 있습니다. 파티원 모두 힘 str이 각각 입력되어 있어야 합니다. 
-1. 입력이 없는 사람은 str = 1로 처리합니다. 
-2. str이 입력된 사람들은 힘을 모두 합친 값을 return합니다. -->
+      이름 없는 파티원 4명이 있습니다. 파티원 모두 힘 str이 각각 입력되어 있어야 합니다. 
+      1. 입력이 없는 사람은 str = 1로 처리합니다. 
+      2. str이 입력된 사람들은 힘을 모두 합친 값을 return합니다.
 
+```javascript
 let arr2 = [{str: 1}, {str:2}, {str:3}, {int:4, dex:1, job:'wizard'}];
 ```
 
@@ -93,8 +93,6 @@ let arr2 = [{str: 1}, {str:2}, {str:3}, {int:4, dex:1, job:'wizard'}];
 key값이 존재하는지 검사하고, 없는 사람은 curVal.str = 1로 지정한다. 즉, 해당 객체에 {str : 1}이라는 key, value값을 추가하겠단 뜻.
 그리고 acc + curVal.str을 처리해서 파티원들의 str을 총합한다.
 ```
-
-### code
 
 ```javascript
 let arr2 = [{str: 1}, {str:2}, {str:3}, {int:4, dex:1, job:'wizard'}];

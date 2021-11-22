@@ -249,7 +249,7 @@ const makeString = (x,y) => `입력된 값은 ${y}이고 2배는 ${x}입니다.`
 const pipe = (...functions) => (input1, input2) => functions.reduce((acc, fn) => fn(acc, input2), input1);
 const myfunc = pipe(double, makeString);
 
-const result = myfunc(2);
+const result = myfunc(2,2);
 ```
 
 ### 해설
@@ -272,6 +272,7 @@ const result = myfunc(2);
 4-3. 현재 fn은 double이다. fn(acc, input2)는 double(2, 2)다.
 
 4-4. double(2, 2)의 결과를 acc에 return한다.
+※ double은 원래 인자를 하나만 받는 함수다. js가 아니라 다른 곳에서 이런 짓을 하면 error가 날 것.
 
 4-5. 다음 fn은 makeString이다. fn(acc, input2)는 makeString(4, 2) = `입력된 값은 2이고 2배는 4입니다.`를 return
 

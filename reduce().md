@@ -134,11 +134,14 @@ let countedNames = names.reduce((allNames, name) => {
 
 ```txt
 1. allNames의 초기값은 빈 객체 {}로 지정됐다. name의 첫 값은 string타입 'Alice'이다.
-2. allNames 안에 name 'Alice'가 있는지 검사하고, 있으면 allNames['Alice'] += 1로 처리한다. 처리된다면 {'Alice' : 1} => {'Alice' : 2}로 될 것
-3. 만약에 allNames 안에 name 'Alice'가 없다면 allNames['Alice'] = 1이라고 처리한다. 처리된다면 {} => {'Alice' : 1}로 될 것.
+2. allNames 안에 name 'Alice'가 있는지 검사하고, 있으면 allNames['Alice'] += 1로 처리한다. 
+처리된다면 {'Alice' : 1} => {'Alice' : 2}로 될 것
+3. 만약에 allNames 안에 name 'Alice'가 없다면 allNames['Alice'] = 1이라고 처리한다. 
+처리된다면 {} => {'Alice' : 1}로 될 것.
 4. allNames를 return한다. 따라서 첫 과정이 끝나면 allNames는 {} => {'Alice' : 1}로 바뀐다.
 5. 두 번 돌고나면 allNames는 {'Alice' : 1} => {'Alice' : 1, 'Bob': 1}로 바뀐다.
-6. 처리가 모두 끝나면 결과는 allNames는 { Alice: 2, Bob: 1, Tiff: 1, Bruce: 1 }가 되며, 이 결과값은 변수 countedNames에 들어간다.
+6. 최종적으로 allNames는 객체 { Alice: 2, Bob: 1, Tiff: 1, Bruce: 1 }가 된다. 
+7. 이 결과는 변수 countedNames에 들어간다.
 ```
 
 ### 참고 링크

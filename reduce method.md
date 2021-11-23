@@ -101,6 +101,23 @@ let sum2 = arr2.reduce((acc, curVal) => {
   return acc + curVal.str}, 0);
 ```
 
+### 추가 예제
+
+```txt
+배열들을 가지고 객체를 만들 때에도 유용하다.
+```
+
+```javascript
+let genres = ["classic", "pop", "classic", "classic", "pop"];
+let plays = [500, 600, 150, 800, 2500];
+
+let set = genres.reduce((acc,cur,i)=>acc.concat({'i': i, 'genre': cur, 'play': plays[i]}),[]);
+```
+
+### 결과
+
+![image](https://user-images.githubusercontent.com/39308313/143067116-1299014c-f547-4b85-8e3b-35b957f8ad9a.png)
+
 ### 4) 이중 배열을 풀어내고 싶을 때
 
 ```javascript

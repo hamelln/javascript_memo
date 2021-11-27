@@ -2,7 +2,7 @@
 
 ## '객체' 안을 검사할 때 쓴다.
 
-```
+```javascript
 let array = [10,20,30,40,50];
 let obj = {js : "weird", html : "hard", css : "ha~~rd"};
 let objArr = [

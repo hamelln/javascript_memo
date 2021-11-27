@@ -1,8 +1,8 @@
-### in은 언제 쓸까?
+## in은 언제 쓸까?
 
-## '객체' 안의 key값을 찾을 때 쓴다. 예) "문자열"(key) in Object
+### '객체' 안의 key값을 찾을 때 쓴다.
 
-## 예시
+### "문자열"(key) in Object
 
 ```javascript
 let array = [10,20,30,40,50];

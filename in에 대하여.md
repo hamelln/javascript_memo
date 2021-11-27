@@ -24,4 +24,4 @@ console.log(`"fromCharCode" in String: ${"fromCharCode" in String}`);
 
 ```
 
-![image](https://user-images.githubusercontent.com/39308313/143670232-2d0b5fa6-1bfe-4e96-a8bb-668d82c29bcf.png)
+![image](https://user-images.githubusercontent.com/39308313/143670246-8a115ff7-ac60-4a99-a14c-f7bd1efca220.png)

@@ -25,3 +25,13 @@ console.log(`"fromCharCode" in String: ${"fromCharCode" in String}`);
 ```
 
 ![image](https://user-images.githubusercontent.com/39308313/143670246-8a115ff7-ac60-4a99-a14c-f7bd1efca220.png)
+
+```
+array는 배열이지만 타입은 객체로 분류된다. 하지만 key값이랄 게 없는 상태이므로 in으로 찾을 수 있는 건 인덱스, 내장 메소드 뿐이다.
+
+obj는 key, value가 있는 객체다. 따라서 "key" in obj로 찾을 수 있다.
+
+objArr는 객체 배열이다. 객체마다의 key은 없는 상태라서 'js'로 검색하면 찾을 수 없다.
+
+Math, Object, String 등은 객체이므로 내장된 메소드를 찾을 수 있다.
+```

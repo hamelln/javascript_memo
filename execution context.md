@@ -23,10 +23,22 @@ html에 빈 js파일을 연결시킨 다음 실행한 뒤 this를 입력하면 �
 ![image](https://user-images.githubusercontent.com/39308313/144028698-b18ba814-01b7-41db-a56a-328ecc7e1f9f.png)
 
     코드가 없다고 일을 안 하는 게 아니다.
-    
-코드가 없어도 javaScript 엔진은 GEC를 만들고 this를 배정한다.  
 
-    FEC는 함수를 '실행'할 때 만들어진다.('선언'할 때가 아니다.)
+EC는 두 가지의 단계(phase)를 거친다.
+
+1. 생성 단계(Creation phase)
+2. 실행 단계(Execution phase)
+
+        생성 단계는 변수의 '선언'을 읽고, 실행 단계는 변수의 '값'을 읽는다.
+
+```javascript
+let ten = 10;
+```
+
+1. 위와 같은 코드가 있으면 GEC는 생성 단계에서 ten이라는 변수를 인식한다.  
+2. 생성 단계가 끝나면 실행 단계에서 GEC는 ten이라는 변수에 10이라는 값을 할당한다.   
+
+        FEC는 함수를 '실행'할 때 만들어진다.('선언'할 때가 아니다.)
 
 function 내에서 this는 '자신이 속한 객체'를 가리킨다.  
 

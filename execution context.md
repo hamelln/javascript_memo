@@ -38,14 +38,12 @@ let ten = 10;
 
 ```txt
 GEC는 생성 단계에서 ten을 인식한다.  
-현재 ten은 uninitialized 상태다. 초기화 자체가 안 된 상태.  
+현재 ten은 'uninitialized' 상태다. 초기화 자체가 안 된 상태.  
 만약 let, const가 아니라 var를 사용할 경우 ten은 생성 단계에서 undefined라고 '초기화'가 된다.  
 생성 단계가 끝나면 실행 단계에서 GEC는 ten이라는 변수에 10이라는 값을 할당한다.   
 ```
 
     FEC는 함수를 '실행'할 때 만들어진다.('선언'할 때가 아니다.)
-
-function 내에서 this는 '자신이 속한 객체'를 가리킨다.  
 
 ```javascript
 const mainObj = {
@@ -63,9 +61,11 @@ mainObj.method();
 mainObj.obj.method();
 ```
 
+    function 내에서 this는 '자신이 속한 객체'를 가리킨다.  
+
 ![image](https://user-images.githubusercontent.com/39308313/144036400-1c4b51e0-3edf-469f-a75e-c2a4e6462278.png)
 
-(단, 화살표 함수의 this는 function으로 선언할 때와 달리 global의 this를 가리킨다.)  
+    (단, 화살표 함수의 this는 function으로 선언할 때와 달리 global의 this를 가리킨다.)  
 
 ```javascript
 const mainObj = {

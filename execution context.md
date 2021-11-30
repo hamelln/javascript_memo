@@ -3,7 +3,7 @@
 javaScript Engine은 js코드를 실행하기 전에, 먼저 코드의 맥락을 짚는다.  
 그 코드가 말이 되는 코드인지, 실행할 만한 코드인지 살펴본다는 얘기다.  
 
-그러한 맥락을 Execution Context(EC)라 한다.  
+그러한 맥락을 Execution Context (EC)라 한다.  
 
 ### EC에는 세 가지 종류가 있다.  
 

@@ -1,19 +1,36 @@
 ### Execution context
 
-실행 컨텍스트 기본으로는 Global Execution Context가 있다.  
-GEC는 기본적으로 Global Object를 만들고, 'this'를 제공한다.  
-아무 코드를 작성하지 않아도, this를 입력하면 아래와 같이 뜬다.  
+javaScript Engine은 js코드를 실행하기 전에, 먼저 코드의 맥락을 짚는다.  
+그 코드가 말이 되는 코드인지, 실행할 만한 코드인지 살펴본다는 얘기다.  
+
+그러한 맥락을 Execution Context(EC)라 한다.  
+
+### EC에는 세 가지 종류가 있다.  
+
+1. Global Execution Context (GEC)
+2. Functional execution context (FEC)
+3. Eval
+
+3번은 잘 모르겠고, 주로 1,2번을 다루는 듯하니 1,2번만 살펴보자.  
+
+
+    GEC는 js를 실행할 때 만들어진다.
+
+GEC는 Global Object를 만들고, 'this'를 제공한다.  
+브라우저에 살펴보면 이 this는 window와 같다.
+html에 빈 js파일을 연결시킨 다음 실행한 뒤 this를 입력하면 아래와 같이 뜬다.  
 
 ![image](https://user-images.githubusercontent.com/39308313/144028698-b18ba814-01b7-41db-a56a-328ecc7e1f9f.png)
 
-    코드가 없다고 아무 일도 안 하는 게 아니었다.
+    코드가 없다고 일을 안 하는 게 아니다.
     
-코드가 없어도 JS 엔진은 GEC를 만들고 this를 배정한다.  
+코드가 없어도 javaScript 엔진은 GEC를 만들고 this를 배정한다.  
 
-위의 경우는 코드에서 콘솔로그로 this를 찍어도 window가 나오지만, 'use strict'를 적용하면 this는 undefined로 나온다.  
-(단, 이 때에도 브라우저에서 this라고 치면 window가 나옴)  
 
-function 내에서 this란, 자신이 속한 객체를 가리킨다.  
+
+    FEC는 함수를 '실행'할 때 만들어진다.('선언'할 때가 아니다.)
+
+function 내에서 this는 '자신이 속한 객체'를 가리킨다.  
 
 ```javascript
 const mainObj = {
@@ -30,8 +47,6 @@ const mainObj = {
 mainObj.method();
 mainObj.obj.method();
 ```
-
-위와 같이 할 경우 결과는 다음과 같다.  
 
 ![image](https://user-images.githubusercontent.com/39308313/144036400-1c4b51e0-3edf-469f-a75e-c2a4e6462278.png)
 

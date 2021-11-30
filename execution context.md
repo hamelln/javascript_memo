@@ -127,5 +127,6 @@ console.log(b);
 
 ![image](https://user-images.githubusercontent.com/39308313/144050747-8c6e01c2-0340-40ad-a65b-e0a6f8ec0c5e.png)
 
-언뜻 보면 f1을 둘러싼 객체가 set인 것처럼 보이지만 innerFunc()에 감싸져있기 때문에 f1은 this랄 게 없는 상황이다.
-f2는 innerFunc()가 실행될 때 선언된다. 따라서 f2의 this는 innerFunc라는 set의 메소드 자체를 가리킨다.
+언뜻 보면 f1을 둘러싼 객체가 set인 것처럼 보이지만 innerFunc()에 감싸져있기 때문에 f1은 this랄 게 없는 상황이다.  
+f2는 innerFunc()가 실행될 때 선언된다.  
+따라서 f2의 this는 innerFunc라는 set의 메소드 자체를 가리킨다.  

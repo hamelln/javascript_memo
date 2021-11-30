@@ -99,3 +99,5 @@ func는 set의 getX라는 함수만 가져왔을 뿐이고, getX를 실행한 �
 함수는 실행할 때 Execution Context를 만든다. 
 즉, func()를 실행할 때에 func EC가 만들어지고, 이 때의 this는 global object이다.
 화살표 함수의 this는 호출된 함수를 둘러싼, 선언될 때의 EC를 가리킨다.
+
+화살표 함수의 this는 한 번 정해지면 못 바꾸고, function의 this는 bind 등으로 바꿀 수 있다.

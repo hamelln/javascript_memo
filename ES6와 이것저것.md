@@ -10,7 +10,7 @@ ES6 이후로 var를 내치고 let, const는 'hoisting이 일어나지 않는다
 
 ## Hoisting은 일어난다. 초기화가 안 될 뿐이다.
 
-	var는 undefined로 초기화가 일어나는 것이고, let, const는 uninitialized가 될 뿐이다.
+	var는 undefined로 초기화가 일어나는 것이고 let, const는 uninitialized가 될 뿐이다.
 
 ## 함수도 Hoisting이 일어난다.
 

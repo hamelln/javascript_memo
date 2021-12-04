@@ -127,12 +127,16 @@ Number 타입을 2진법~36진법까지 바꿔준다.
 ```
 
 ```javascript
+// 앞에 0b를 붙이면 2진법
 let binary = 0b10 // 2
 
+// 앞에 0을 붙이면 8진법
 let octar = 010 // 8
 
+// 앞에 0x 붙이면 16진법
 let hexar = 0x10 // 16
 
+// 뒤에 n 붙이면 BigInt. 매우 큰 숫자 다룰 때 좋다. 단, 그냥 Number와 BigInt는 서로 연산 불가다.
 let Big = 102n // BigInt
 ```
 
@@ -142,16 +146,15 @@ let Big = 102n // BigInt
 const arr = [3, 5, 7];
 arr.foo = 'hello';
 
+// for in은 key값을 가져온다.
 for (i in arr) {
    console.log(i); // logs "0", "1", "2", "foo"
 }
 
+// for of는 '숫자 인덱스'를 가진 value만 가져온다.
 for (i of arr) {
    console.log(i); // logs 3, 5, 7
 }
-
-for in은 key값들을 가져온다.
-for of는 '숫자 인덱스'를 가진 value만 가져온다.
 
 arr = [3,5,7, foo: 'hello']이다.
 

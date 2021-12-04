@@ -1,18 +1,18 @@
 # 1. Hoisting에 관해
 
 ```txt
-흔히들 ES6 이후로 var를 내치고 let, const를 씀으로 인해 'hoisting이 일어나지 않는다'고 알고 있다.
+ES6 이후로 var를 내치고 let, const는 'hoisting이 일어나지 않는다'고 알고 있다.
 하지만 MDN 문서에서는 이렇게 말하고 있다.
 ```
 
     In ECMAScript 2015, 'let and const are hoisted' but not initialized
     
-```txt
-호이스팅은 일어난다. 하지만 초기화가 안 될 뿐이다.
-var는 undefined로 초기화가 일어나는 것이고, let, const는 uninitialized가 될 뿐이다.
-```
 
-## 함수는 Hoisting이 일어난다.
+## Hoisting은 일어난다. 초기화가 안 될 뿐이다.
+
+	var는 undefined로 초기화가 일어나는 것이고, let, const는 uninitialized가 될 뿐이다.
+
+## 함수도 Hoisting이 일어난다.
 
 ```javascript
 /* Function declaration */
@@ -37,8 +37,9 @@ const baz = function () {
 ```txt
 당연하다.
 위에서 방금 말했다. 
-let, const는 호이스팅이 되더라도 uninitialized다.
-baz는 결국 let, const다. 
+
+결국 baz는 const다. 호이스팅이 되더라도 uninitialized다.
+
 '함수 표현식'이지 '함수'가 아니다. 
 ```
 
@@ -64,9 +65,11 @@ arr.shift();
 ```txt
 const arr = [1,2,3];
 const obj = {name: 'hj'};
+
 arr, obj는 지정해준 주소에 값을 넣었을 뿐이다.
+
 주소에서 1,2,3을 퇴거시키고 'a','b','c'를 이사시키든 뭘 하든 그건 자유다.
-주소지 자체만 통째로 못 바꿀 뿐이다.
+'주소 자체'만 통째로 못 바꿀 뿐이다.
 ```
 
 ## js에는 primitive 타입이 7개 있다.

@@ -140,6 +140,17 @@ let hexar = 0x10 // 16
 let Big = 102n // BigInt
 ```
 
+### 7-1. 매우 큰, 매우 작은 숫자
+
+```javascript
+Number.MAX_SAFE_INTEGER = 2^53 - 1 = 9007199254740991
+Number.EPSILON = 2.220446049250313e-16
+
+Math.pow(Number.EPSILON, 20) * Number.MAX_VALUE = 0.000015258789062499998
+MAX_VALUE가 매우 크지만 ε^20만 곱해도 엄청 작아진다.
+
+```
+
 ## 8. for in, for of에 대해
 
 ```javascript
@@ -163,3 +174,14 @@ arr = [3,5,7, foo: 'hello', 5]....
 가 되어야할 거 같지만 유감스럽게도
 [ 3, 5, 7, <1 empty item>, 9, foo: 'hello' ]이다.
 ```
+
+## 9. Set에 대해
+
+```javascript
+array에서 어떤 값을 찾을 때 includes를 쓴다.
+
+하지만 MDN에선 이런 말을 한다.
+
+```
+
+*! The Set has method checks if a value is in a Set object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the Set object. In particular, it is, on average, faster than the Array.prototype.includes method

@@ -118,3 +118,45 @@ String을 2진법~36진법까지 바꿔주는 친절한 기능이 있다.
 Number 타입을 2진법~36진법까지 바꿔준다.
 아무 입력 없이 하면 10진법으로 바꾼다.
 ```
+
+## 7. 숫자 리터럴 (Numeric literals)
+
+```txt
+난 Number => Number로 진법 바꾸고 싶은데?
+숫자 리터럴로 제한적인 변환이 가능하다.
+```
+
+```javascript
+let binary = 0b10 // 2
+
+let octar = 010 // 8
+
+let hexar = 0x10 // 16
+
+let Big = 102n // BigInt
+```
+
+## 8. for in, for of에 대해
+
+```javascript
+const arr = [3, 5, 7];
+arr.foo = 'hello';
+
+for (i in arr) {
+   console.log(i); // logs "0", "1", "2", "foo"
+}
+
+for (i of arr) {
+   console.log(i); // logs 3, 5, 7
+}
+
+for in은 key값들을 가져온다.
+for of는 '숫자 인덱스'를 가진 value만 가져온다.
+
+arr = [3,5,7, foo: 'hello']이다.
+
+arr[4] = 5; 라고 하면?
+arr = [3,5,7, foo: 'hello', 5]....
+가 되어야할 거 같지만 유감스럽게도
+[ 3, 5, 7, <1 empty item>, 9, foo: 'hello' ]이다.
+```

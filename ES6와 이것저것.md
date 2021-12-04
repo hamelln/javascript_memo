@@ -181,8 +181,7 @@ arr = [3,5,7, foo: 'hello', 5]....
 array에서 어떤 값을 찾을 때 includes를 쓴다.
 하지만 MDN에선 이런 말을 한다.
 ```
-
-### *The Set has method checks if a value is in a Set object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the Set object. In particular, it is, on average, faster than the Array.prototype.includes method*
+### *The Set 'has method' checks if a value is in a Set object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the Set object. In particular, it is, on average, 'faster than the Array.prototype.includes' method*
 
 ```javascript
 // Set은 Unique한 value만 가지기 때문에 중복값을 제거할 때에도 탁월하다.

@@ -72,7 +72,7 @@ arr, obj는 지정해준 주소에 값을 넣었을 뿐이다.
 '주소 자체'만 통째로 못 바꿀 뿐이다.
 ```
 
-## js에는 primitive 타입이 7개 있다.
+## 3. js에는 primitive 타입이 7개 있다.
 
 1. String
 2. Number
@@ -92,4 +92,29 @@ s = s다. s = d = z라고 주장하는 미친 언어학자는 없다.
 let str = "abc"
 str.toUpperCase();을 해도 str은 불변이다.
 str = str.toUpperCase();를 해서 str 변수에 다시 값을 재지정하는 것이다.
+```
+
+## 4. js는 이상하다.
+
+```javascript
+'37' - 7 // 30
+'37' + 7 // "377"
+```
+
+## 5. parseInt는 x진법을 제공한다.
+
+![image](https://user-images.githubusercontent.com/39308313/144715883-93ccfe5d-1417-4d00-b8e3-af1c7f5603f3.png)
+
+```txt
+String을 2진법~36진법까지 바꿔주는 친절한 기능이 있다.
+아무 입력 없이 하면 10진법으로 바꿔준다.
+```
+
+## 6. toString도 x진법을 제공한다.
+
+![image](https://user-images.githubusercontent.com/39308313/144716403-6d4954fa-d01c-417e-8283-b78c52e90390.png)
+
+```txt
+Number 타입을 2진법~36진법까지 바꿔준다.
+아무 입력 없이 하면 10진법으로 바꾼다.
 ```

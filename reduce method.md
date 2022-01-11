@@ -4,7 +4,20 @@
 
 - 배열을 가지고 누산기 변수acc와 최근 값 currentValue를 받아서 처리하는 함수.
 
-### 뭔 말이냐?
+### 왜 이름이 reduce냐?
+
+      이 reduce는 "감소하다"라는 의미로 쳐다보면 이해가 어렵다.
+
+```txt
+reduce에는 다음과 같은 의미도 있다.
+
+2: to cause (someone) to be in a specified state or condition
+3: to cause (something) to be in a specified form by breaking it, burning it, etc.
+
+'어떤 것을 특정한 state, form, 상태로 만든다.'
+
+참고로 redux에서 쓰는 reducer도 이런 의미로 쳐다봐야 이해가 더 쉬울 것이다.
+```
 
 - 예시부터 보자.
 

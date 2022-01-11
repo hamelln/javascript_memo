@@ -9,12 +9,16 @@
     이 reduce는 "감소하다"라는 의미로 쳐다보면 이해가 어렵다.
 
 ```txt
-reduce에는 다음과 같은 의미도 있다.
+reduce에는 다음과 같은 의미들도 있다.
 
-2: to cause (someone) to be in a specified state or condition
-3: to cause (something) to be in a specified form by breaking it, burning it, etc.
+to cause (someone) to be in a specified state or condition
+to cause (something) to be in a specified form by breaking it, burning it, etc.
+to transpose from one form into another
+to become concentrated or consolidated
+...
 
 '어떤 것을 특정한 state, form, 상태로 만든다.'
+'어떤 것을 통합시킨다.'
 
 참고로 redux에서 쓰는 reducer도 이런 의미로 쳐다봐야 이해가 더 쉬울 것이다.
 ```

@@ -20,9 +20,9 @@ to become concentrated or consolidated
 '(뭔가를) 특정한 state, form 등으로 변형시키다.'
 
 참고로 redux에서 쓰는 reducer도 이런 의미로 쳐다봐야 이해가 더 쉬울 것이다.
-```
 
-- 예시부터 보자.
+reduce를 활용하는 방법은 매우 많다. 아래에 몇 가지를 소개하겠다.
+```
 
 ### 1) 정수 배열의 합을 구하고 싶을 때
 

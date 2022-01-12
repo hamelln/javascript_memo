@@ -17,7 +17,7 @@ to transpose from one form into another
 to become concentrated or consolidated
 ...
 
-'(뭔가를) 특정한 state, form 등으로 변형시킨다.'
+'(뭔가를) 특정한 state, form 등으로 변형시키다.'
 
 참고로 redux에서 쓰는 reducer도 이런 의미로 쳐다봐야 이해가 더 쉬울 것이다.
 ```

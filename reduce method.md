@@ -2,7 +2,7 @@
 
 ### 개요
 
-- 배열을 가지고 누산기 변수acc와 최근 값 currentValue를 받아서 처리하는 함수.
+- 배열을 가지고 누산기 변수acc와 최근 값 currentValue를 받아서 처리하는 메소드
 
 ### 왜 이름이 reduce냐?
 

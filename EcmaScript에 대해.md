@@ -13,6 +13,8 @@ console.log(arr.at(-1));
 let x = 5;
 let y = 6;
 x &&= y;
+
+결과 : x = 6
 ```
 
 ```txt
@@ -32,4 +34,29 @@ x ??= y;
 ```txt
 x?는 x가 true인지 보겠다는 것이다.
 x??는 x가 null, undefined 중 하나인지 확인하겠다는 것.
+```
+
+## flat()
+
+```js
+let arr = [1, 2, 3, 4, 5, [[[6, 7]]]];
+console.log(arr.flat(3));
+
+결과 : [1,2,3,4,5,6,7]
+```
+
+## flatMap()
+
+```js
+let arr1 = [1, 2, 3, 4];
+
+arr1.map(x => [x * 2]);
+// [[2], [4], [6], [8]]
+
+arr1.flatMap(x => [x * 2]);
+// [2, 4, 6, 8]
+
+// only one level is flattened
+arr1.flatMap(x => [[x * 2]]);
+// [[2], [4], [6], [8]]
 ```

@@ -19,7 +19,8 @@ to become concentrated or consolidated
 
 '(뭔가를) 특정한 state, form 등으로 변형시키다.'
 
-참고로 redux에서 쓰는 reducer도 이런 의미로 쳐다봐야 이해가 더 쉬울 것이다.
+변환기, 변환자라는 느낌으로 생각하면 한결 직관적이다.
+redux에서 쓰는 reducer도 이런 의미로 쳐다봐야 이해가 쉬울 것이다.
 
 reduce를 활용하는 방법은 매우 많다. 아래에 몇 가지를 소개하겠다.
 ```

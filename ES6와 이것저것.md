@@ -205,13 +205,10 @@ console.log([...new Set(numbers)])
 
 ```txt
 멱등성이란 어떤 함수의 결과물을 그 함수에 다시 넣어도 결과가 똑같이 유지되는 성질을 말한다.
-
 ```
-
 ```js
 Math.abs(Math.abs(10))
 ```
-
 ```txt
 알아둘 이유: 
 RESTful 웹 서비스를 할 때처럼, POST, DELETE 등의 똑같은 요청이 동시에 잔뜩 들어와도 똑같은 결과 하나만 반환해야 한다.

@@ -92,6 +92,8 @@ s = s다. s = d = z라고 주장하는 미친 언어학자는 없다.
 let str = "abc"
 str.toUpperCase();을 해도 str은 불변이다.
 str = str.toUpperCase();를 해서 str 변수에 다시 값을 재지정하는 것이다.
+
+불변은 아니지만, react에서 props, state 등을 다룰 때에도 함부로 원본을 바꾸진 않게 한다.
 ```
 
 ## 4. js는 이상하다.

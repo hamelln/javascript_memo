@@ -360,6 +360,11 @@ MDN 문서에서는 set과 Array.from을 활용하는 것도 권장한다.
 ```
 
 
+```txt
+이것들 외에도 활용 방법은 사용자의 마음대로 무궁무진하다.
+배열을 가지고 자기 입맛대로 변형시켜 만들어내는 메소드라서 한 번 맛들리면 꽤 쓰게 된다.
+```
+
 ### 참고 링크
 
 [MDN reduce()문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
